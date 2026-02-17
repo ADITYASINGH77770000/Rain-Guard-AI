@@ -1,0 +1,56 @@
+{
+"system_name": "Autonomous Flood Alert Engine",
+"version": "1.0",
+
+"risk_score_weights": {
+"flood_probability": 0.5,
+"rainfall": 0.25,
+"population_exposure": 0.15,
+"infrastructure_proximity": 0.10
+},
+
+"thresholds": {
+"flood_risk_threshold": 0.75,
+"rainfall_threshold_mm": 100,
+"population_density_threshold": 500,
+"infrastructure_distance_m": 1000
+},
+
+"alert_levels": {
+"LOW": {
+"min_score": 0.40,
+"color": "green",
+"action": "Monitor situation"
+},
+"MEDIUM": {
+"min_score": 0.60,
+"color": "yellow",
+"action": "Prepare emergency teams"
+},
+"HIGH": {
+"min_score": 0.75,
+"color": "orange",
+"action": "Send alerts to local authorities"
+},
+"CRITICAL": {
+"min_score": 0.90,
+"color": "red",
+"action": "Immediate evacuation recommended"
+}
+},
+
+"auto_alert_rules": [
+{
+"rule": "flood_probability > 0.85 AND rainfall > 120",
+"trigger": "CRITICAL"
+},
+{
+"rule": "flood_probability > 0.75 AND infrastructure_distance_m < 1000",
+"trigger": "HIGH"
+},
+{
+"rule": "population_density > 1000 AND flood_probability > 0.7",
+"trigger": "CRITICAL"
+}
+]
+}

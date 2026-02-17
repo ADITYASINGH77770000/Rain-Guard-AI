@@ -1,0 +1,21 @@
+{
+  "trained_at": "2026-02-15 02:44:43",
+  "resolution": "r10m",
+  "before_image": "D:\\Riverthon\\output\\before_flood_r10m.jpg",
+  "after_image": "D:\\Riverthon\\output\\after_flood_r10m.jpg",
+  "optimal_ndwi_threshold": 0.2,
+  "ocean_exclusion_frac": 0.4,
+  "metrics": {
+    "before_water_pct": 0.074,
+    "after_water_pct": 0.074,
+    "water_change_pct": 0.0,
+    "estimated_flood_area_km2": 0.0,
+    "flood_confirmed": false
+  },
+  "outputs": {
+    "annotated_before": "D:\\Riverthon\\cv\\output\\annotated_before.jpg",
+    "annotated_after": "D:\\Riverthon\\cv\\output\\annotated_after.jpg",
+    "water_mask_after": "D:\\Riverthon\\cv\\output\\water_mask_after.jpg",
+    "flood_comparison": "D:\\Riverthon\\cv\\output\\flood_comparison.jpg"
+  }
+}
